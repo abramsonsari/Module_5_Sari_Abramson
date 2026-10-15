@@ -1,11 +1,12 @@
-#Word lists, game counts:
+#Word lists and game counters
 animals = ['dog', 'cat', 'wolf', 'bird', 'lion', 'zebra','horse', 'tiger','flamingo','monkey']
-supplies = ['pencil', 'pen', 'paper', 'scissors', 'glue','binder','tape','crayons','eraser','folder']
+supplies = ['pencil', 'pen', 'desk', 'markers', 'glue','binder','tape','crayons','labels','folder']
 colors = ['red','orange','blue','pink','teal','silver','gold','peach','gray','violet']
 fruits = ['plum','grapes', 'melon','orange', 'mango','lemon','pear','peach', 'kiwi','lime' ]
 wins = 0
 losses = 0
 
+#sentinel loop of the game (multiple rounds)
 while True:
 
 #getting word category
@@ -38,7 +39,7 @@ while True:
             continue
         else:
             break
-
+#generating a random word from chosen category
     import random
     word_chosen = random.choice(category)
     wrong_guesses = 0
@@ -49,9 +50,10 @@ while True:
 
     print("".join(guessed))
 
-
+#sentinel loop of game-play (single round)
     while wrong_guesses < difficulty:
         print()
+    #user guesses a letter, input is validated
         guess = input("Guess a letter: ").strip().lower()
         if len(guess)!=1:
             print("Invalid input, guess one letter at a time.")
@@ -60,7 +62,7 @@ while True:
             print("Only letters, try again.")
             continue
 
-
+    #inputed letter compared to chosen word
         if (guess in letters) == True:
             print("already guessed that letter. ")
             print("".join(guessed))
@@ -80,7 +82,7 @@ while True:
             print(f"Guessed letters: {letters}")
             print("".join(guessed))
 
-
+    #if guessed the limit or got word outputs
         if wrong_guesses == difficulty:
             print(f"Sorry, you didn't guess the correct word within {difficulty} tries.")
             print(f"The word was {word_chosen}.")
@@ -95,6 +97,7 @@ while True:
     print(f"Total scores:")
     print(f"Wins: {wins}")
     print(f"Losses: {losses}")
+#asking the user if they want to play again
     while True:
         play = input("Do you want to play again? (y/n): ").strip().lower()
         if not(play == "y" or play =="n"):
