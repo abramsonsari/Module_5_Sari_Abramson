@@ -1,0 +1,111 @@
+Guess the Word — Individual Project (Logic Game, 5–7 hours)
+Support for Guess the Word : String and List manipulationLinks to an external site.
+
+Overview
+Build a console word-guessing game. The computer chooses a secret word; the player guesses letters. Correct guesses reveal letters; incorrect guesses reduce the number of tries. The game ends when the player reveals the whole word or runs out of tries.
+
+Requirements (must have)
+Word Pool
+
+Store a small in-code list of at least 20 words (strings).
+
+Pick one random word each round.
+
+Game Loop
+
+Show progress as underscores and revealed letters (e.g., p _ t h o n).
+
+Prompt the player to enter a single letter.
+
+Track already guessed letters; do not penalize repeats—just warn and reprompt.
+
+If the letter is in the word, reveal all positions; otherwise decrease remaining tries.
+
+Game ends on win (all letters revealed) or when tries reach 0.
+
+Tries & Feedback
+
+Start with 6–10 tries (you choose).
+
+After each guess, print:
+
+the masked word (with spaces between letters),
+
+remaining tries,
+
+sorted list of letters already guessed.
+
+Input Validation
+
+Ignore and reprompt on blank input.
+
+Accept only letters a–z (case-insensitive); convert to lower case internally.
+
+If the user types more than one character or a non-letter, reprompt.
+
+Play Again
+
+After a round ends, ask: “Play again? (y/n)”. Validate and loop accordingly.
+
+Scores 
+Keep track of the score of your player.  Wins vs Losses
+No Scaffolding
+
+Do not import external files or use starter code. Standard library only (random is fine).
+
+Choose 2:
+Difficulty levels (tries 10/8/6 or word length buckets).
+
+Categories (animals, foods, sports) with random pick from the chosen category.
+
+A “hint” that reveals one random unguessed letter (costs 2 tries).
+
+Deliverables
+Code: guess_the_word_<FirstName>_<LastName>.py
+
+Pseudocode (~¾–1 page): high-level steps for one full play session.
+
+Flowchart: the main loop structure (prompt → validate → update → end condition).
+
+Short Reflection (5–7 sentences):
+
+One design choice you changed mid-way and why.
+
+How you validated input and handled edge cases.
+
+One improvement you’d make with more time.
+
+PEP 8 compliant 
+All documentation : docstrings for main program and functions, # for logic and variables 
+Suggested Time Budget (5–7 hours)
+45–60 min: Pseudocode + flowchart
+
+90–120 min: Core loop (masking, guesses, tries, win/lose)
+
+45–60 min: Input validation polish + replay loop
+
+45–60 min: Optional features + refactor
+
+20–30 min: Final test and clean comments
+
+*** Please understand that this is a guestimate, some coders are much slower. 
+Extra Credit 3 points : 
+visualize this game in turtle graphics.
+ 
+
+Rubric (100 pts)
+Core mechanics (masking, correct/incorrect handling, win/lose) – 35
+
+Input validation (letters only, case-insensitive, repeat-guess handling) – 20
+
+Game loop & replay (clear feedback, plays until exit) – 15
+
+Code organization & readability (functions, naming, comments, documentation) – 15
+
+Pseudocode & flowchart (complete, matches implementation) – 10
+
+pseudocode can be placed at the top of the program 
+
+flowchart can be placed in your github repository, please name same as your program.
+You can use LucidChart and convert to pdf. 
+Polish/creativity (any nice-to-haves, UX clarity) – 5
