@@ -1,4 +1,68 @@
 Start
+Have set word lists
+wins counter set to zero
+losses counter set to zero
+
+Sentinel Loop of game:
+  Loop to pick a category:
+    if input doesn't match category, continue
+    else, break
+  match input string to a category 
+  if string == "categoryx" then string = categoryx (the list)
+
+  another loop to get difficulty level:
+    difficulty: get input from user for a number
+    try 
+      make it INT
+      check if valid INT
+        raise error
+      break
+    except error 
+      continue
+
+  import random
+  set word to be random word from picked category
+  set wrong guesses to 0
+  set guessed letters to blank list []
+
+  print number of blanks
+  print difficulty guesses allowed
+
+
+  loop of the game - while amount of guesses is less than allowed guesses:
+    get letter from user
+      validate input, make sure 1 char and letter
+    if in the guessed list
+      display try again
+      continue with game
+    if guess in in chosen word
+      add to list
+      change blank to letter
+      print word with letter unveiled
+    else
+      display not in word
+      guess count raised by 1
+      print number of guesses left
+      display guessed letters (sort first)
+  if amount of guesses met
+    display word
+    losses add one
+  if guesses is chosen word
+    display win message
+    wins add one
+    break
+display total wins and losses 
+
+sentinel loop
+  input Get y/n for playing again
+  validate answer
+    if not, continue, ask again
+  if no
+    break
+  if yes
+    continue main game loop
+
+
 
 
 End
