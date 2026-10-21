@@ -111,3 +111,10 @@ while True:
     elif play == "n":
         print("Thanks for playing!")
         break
+
+'''
+Reflection Questions:
+1) One choice changed and why: I had initally started doing each peice seperately and then I realized when I read that there needed to be a play again option that my whole game needed to be in a sentinel controlled while loop.
+2) How validated: I constantly checked my code. After each new step I ran the code with all different input combinations to ensure that everything was acounted for and handled properly. 
+3) How I would improve with more time: With more time, the first thing that I would add is simple graphics to make the program more user friendly.  
+'''
