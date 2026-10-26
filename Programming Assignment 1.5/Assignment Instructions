@@ -1,0 +1,185 @@
+MCON 141 — The Midnight Carnival
+Programming Assignment — 100 Points
+
+Time allowed: One week
+Estimated completion time: 6–7 hours; approximately 5 hours for a fast student
+Submission: One Python .py file and a brief testing record
+
+Your Mission
+Welcome to the Midnight Carnival!
+
+The carnival opens at sunset, and you have been hired to write the computer program that keeps everything running.
+
+Your program will welcome visitors, check admission requirements, sell game tickets, operate a prize booth, and report how the evening went.
+
+Unfortunately, the carnival has no computer system yet. You will build it!
+
+You will complete five challenges. Each challenge adds functionality to your program. By the end, you should have one working carnival application.
+
+Challenge 1 — The Carnival Entrance (15 points)
+Every visitor must pass through the entrance.
+
+Ask each visitor for:
+
+Their name.
+
+Their age (a whole number).
+
+Whether they have a VIP pass (yes or no).
+
+Admission rules:
+
+Visitors younger than 8 must be accompanied by an adult. For this project, assume they cannot enter on their own.
+
+Visitors aged 8–17 may enter for $5.
+
+Visitors aged 18 or older pay $10.
+
+Visitors of any permitted age with a VIP pass enter free.
+
+Your program must use an if/elif/else structure and compound Boolean logic where appropriate.
+
+Print a welcoming message indicating whether the visitor may enter and the admission charge.
+
+For this challenge, you may assume the visitor enters a valid age and a valid VIP response.
+
+Challenge 2 — The Ticket Booth (20 points)
+Visitors need tickets to play carnival games.
+
+Each ticket costs $2.
+
+Ask the visitor how many tickets they wish to purchase. Accept whole numbers from 1 through 20.
+
+Your program must:
+
+Use a while loop to keep asking until a valid number is entered.
+
+Use try/except to handle input that cannot be converted to an integer.
+
+Explicitly raise ValueError if the number is outside 1–20.
+
+Display a helpful message for invalid input.
+
+Use the else clause associated with try to accept a valid purchase and end the validation loop.
+
+Calculate and display the ticket cost.
+
+Example:
+
+How many tickets? abc
+Please enter a whole number.
+
+How many tickets? 25
+Tickets must be between 1 and 20.
+
+How many tickets? 6
+Accepted: 6
+Ticket cost: $12
+The ticket cost must be added to the visitor's total charges.
+
+Challenge 3 — The Lucky Number Game (20 points)
+Visitors may use their purchased tickets to play the Lucky Number Game.
+
+Each play costs one ticket.
+
+For each play, ask the visitor to guess a whole number between 1 and 5.
+
+The carnival's winning number is 3.
+
+Scoring rules:
+
+Correct guess: award 10 prize points.
+
+Incorrect guess: award 2 prize points.
+
+A guess outside 1–5 earns no points, but still uses one ticket.
+
+Use a for loop to process the number of purchased tickets, and use an accumulator to keep track of the visitor's prize points.
+
+Use conditional statements to determine the points awarded for each guess.
+
+Assume the visitor enters integers for the guesses.
+
+At the end, display the total prize points earned.
+
+Challenge 4 — The Mystery Prize Board (20 points)
+The carnival has a mysterious illuminated prize board.
+
+Your program must generate this pattern:
+
+* - - - *
+- * - * -
+- - * - -
+- * - * -
+* - - - *
+Use two nested while loops to display the five rows and five columns.
+
+The outer loop controls the rows. The inner loop controls the columns.
+
+Use conditional logic to decide whether to display * or -.
+
+You must generate the pattern using loops. You may not simply print five complete rows as separate strings.
+
+After displaying the board, print the total number of positions examined by the inner loop.
+
+Challenge 5 — Closing Time! (15 points)
+Your carnival must be able to serve multiple visitors.
+
+Use a sentinel-controlled loop to repeat the visitor experience.
+
+At the beginning of each visit, ask for the visitor's name. If the operator enters done, the carnival closes.
+
+For each visitor who is admitted, run the ticket booth and Lucky Number Game, then display the prize board.
+
+Maintain accumulators for:
+
+Number of visitors admitted.
+
+Total admission revenue.
+
+Total ticket revenue.
+
+Total prize points awarded.
+
+Visitors who are denied admission must not purchase tickets or play games.
+
+When the operator enters done, display an end-of-night report containing all four totals and the combined revenue.
+
+Use meaningful variable names and initialize your accumulators correctly.
+
+Final Requirements — Code Quality and Testing (10 points)
+Your completed program must:
+
+Run without syntax errors.
+
+Use clear, consistent indentation.
+
+Include comments explaining important decisions, loops, and accumulators.
+
+Display understandable prompts and results.
+
+Use only the Python concepts covered in class through Exam 1.
+
+You are not required to use functions, arguments, return statements, dictionaries, classes, files, or imported modules.
+
+Testing record: At the bottom of your Python file, include a comment section describing at least five tests you performed, the inputs used, and whether the results were correct.
+
+Your tests must include a denied visitor, a VIP visitor, an invalid ticket quantity, a nonnumeric ticket entry, and multiple visitors followed by done.
+
+Grading Rubric
+Component	Points
+Challenge 1 — Entrance	15
+Challenge 2 — Ticket Booth	20
+Challenge 3 — Lucky Number Game	20
+Challenge 4 — Mystery Prize Board	20
+Challenge 5 — Closing Time	15
+Code quality and testing	10
+Total	100
+Submission
+Submit one .py file named MidnightCarnival.py.
+
+Your file must contain your name, the assignment title, your completed Python program, and your testing comments.
+
+Remember: Build one challenge at a time. Run and test your program before adding the next challenge. A smaller section that works correctly is better than a large program that you have never tested.
+
+Have fun bringing your carnival to life!
